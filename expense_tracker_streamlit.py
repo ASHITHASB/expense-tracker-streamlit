@@ -71,10 +71,10 @@ else:
 # Budget tracking
 total_spent = df["amount"].sum()
 st.subheader("📊 Budget Summary")
-st.markdown(f"**Monthly Budget:** ${budget:.2f}")
-st.markdown(f"**Total Spent:** ${total_spent:.2f}")
+st.markdown(f"**Monthly Budget:** ₹ {budget:.2f}")
+st.markdown(f"**Total Spent:** ₹ {total_spent:.2f}")
 if budget > 0:
     if total_spent > budget:
         st.error("🚨 You have exceeded your budget!")
     else:
-        st.success(f"✅ You have ${budget - total_spent:.2f} remaining.")
+        st.success(f"✅ You have ₹ {budget - total_spent:.2f} remaining.")
